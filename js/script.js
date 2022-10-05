@@ -1,6 +1,26 @@
 const body = document.body;
+const scrollDown = "scroll-down";
+let lastScroll = 0;
 const burger = document.getElementById('burger-menu');
 const menu = document.getElementById('dropdown-menu');
+const content = document.querySelectorAll('.collection');
+const tab = document.querySelectorAll('.collections__item');
+const slider = document.querySelector('.collections__items');
+const list = document.querySelectorAll('.footer__list-title');
+const items = document.querySelectorAll('.footer__top-list');
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll <= 0) {
+      body.classList.remove(scrollDown);
+      return;
+    }
+    else if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+      // down
+      body.classList.add(scrollDown);
+    }
+    lastScroll = currentScroll;
+});
 
 burger.addEventListener('change', e => {
     if(e.target.checked === true) {
@@ -63,10 +83,6 @@ const profile = new Swiper('.profiles__swiper', {
     }
 });
 
-const content = document.querySelectorAll('.collection');
-const tab = document.querySelectorAll('.collections__item');
-const slider = document.querySelector('.collections__items');
-
 function hideTabContent() {
     content.forEach(item => {
       item.style.display = 'none';
@@ -92,10 +108,6 @@ slider.addEventListener("click", (e) => {
         });
     }
 });
-
-
-const list = document.querySelectorAll('.footer__list-title');
-const items = document.querySelectorAll('.footer__top-list');
 
 list.forEach((item, i) => {
     item.addEventListener("click", (e) => {

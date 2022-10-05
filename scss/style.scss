@@ -20,18 +20,6 @@ body {
     color: #fff;
 }
 
-// .body__bg {
-//     z-index: 0;
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     left: 0px;
-//     top: 0px;
-//     background: rgba(32, 8, 59, 0.75);
-//     // backdrop-filter: blur(92px);
-//     // filter: blur(92px);
-// }
-
 .container {
     max-width: 1370px;
     padding: 0 15px;
@@ -43,10 +31,6 @@ body {
 }
 
 .header {
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    background: rgba(32, 8, 59, 0.75);
     width: 100%;
     font-family: 'Orbitron';
     font-weight: 700;
@@ -75,6 +59,16 @@ body {
             transition: color 0.3s;
         }
     }
+}
+
+.scroll-down .first-screen {
+    top: 107px;
+}
+.scroll-down .header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    background: rgba(32, 8, 59, 0.75);
 }
 
 .header__wrapper, .logo, .menu, .menu__list, .menu-icons {
@@ -175,8 +169,8 @@ body {
 }
 
 .first-screen {
+    position: relative;
     margin-top: 100px;
-    padding-top: 20px;
 }
 
 .first-screen__content {
@@ -437,6 +431,10 @@ body {
             font-size: 17.6873px;
         }
         .nft__auction-button {
+            border: 2.21px solid;
+            border-image-source: linear-gradient(272.52deg, #FFA6FA 47.49%, #3C79D5 98.81%);
+            border-image-slice: 1;
+            box-shadow: 0px 4.81747px 30px rgba(255, 86, 246, 0.51);
             padding: 8px 10px;
             font-family: 'Rajdhani';
             font-weight: 600;
@@ -451,7 +449,6 @@ body {
     max-width: 491px;
     .first-screen__content-img {
         filter: drop-shadow(0px 4.42184px 4.42184px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4.42184px 4.42184px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4.42184px 4.42184px rgba(0, 0, 0, 0.25));
-        
     }
     .first-screen__content-img img {
         clip-path: polygon(20% 0%, 100% 0, 100% 90%, 85% 100%, 0 100%, 0% 15%);
@@ -490,6 +487,9 @@ body {
     margin-bottom: 160px;
     .container {
         overflow-x: hidden;
+    }
+    @media screen and (max-width: 938px) {
+        margin-bottom: 100px;
     }
 }
 
@@ -630,6 +630,9 @@ body {
 
 .collections {
     margin-bottom: 160px;
+    @media screen and (max-width: 938px) {
+        margin-bottom: 100px;
+    }
 }
 
 .collections .container {
@@ -727,6 +730,7 @@ body {
     color: #fff;
     opacity: 1;
     backdrop-filter: blur(105px);
+    box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
 }
 
 .view__all {
@@ -743,6 +747,9 @@ body {
 
 .profiles {
     margin-bottom: 160px;
+    @media screen and (max-width: 938px) {
+        margin-bottom: 100px;
+    }
 }
 
 .profiles .container {
@@ -864,6 +871,10 @@ body {
         font-size: 19.8983px;
         line-height: 25px;
         padding: 11px 74px;
+        box-shadow: 0px 4.81747px 30px rgba(255, 86, 246, 0.51);
+        border: 2.21px solid;
+        border-image-source: linear-gradient(272.52deg, #FFA6FA 47.49%, #3C79D5 98.81%);
+        border-image-slice: 1;
     }
 }
 
@@ -974,6 +985,10 @@ body {
     }
     .top-sellers__button {
         padding: 11px 75px;
+        border: 2.21px solid;
+        border-image-source: linear-gradient(272.52deg, #FFA6FA 47.49%, #3C79D5 98.81%);
+        border-image-slice: 1;
+        box-shadow: 0px 4.81747px 116.824px rgba(255, 86, 246, 0.51);
     }
     @media screen and (max-width: 1360px) {
         .top-sellers__content-card:nth-last-child(-n+4) {
@@ -981,6 +996,7 @@ body {
         }
     }
     @media screen and (max-width: 938px) {
+        margin-bottom: 100px;
         .top-sellers__content-card:nth-last-child(-n+8) {
             display: none;
         }
@@ -1186,17 +1202,25 @@ body {
 .newsletter .container {
     display: flex;
     margin-bottom: 170px;
+    .newsletter__img {
+        border-radius: 4.42184px;
+        max-width: 698px;
+        object-fit: cover;
+    }
     @media screen and (max-width: 1340px) {
         gap: 100px;
         align-items: center;
         flex-direction: column-reverse;
+    }
+    @media screen and (max-width: 938px) {
+        margin-top: -100px;
+        margin-bottom: 100px;
     }
     @media screen and (max-width: 768px) {
         .newsletter__img {
             width: 100%;
             height: 380px;
         }
-        margin-bottom: 100px;
     }
 }
 
@@ -1234,12 +1258,16 @@ body {
         }
         .subscribe-button {
             padding: 10px 34px;
-            border-radius: 0px 5.5273px 5.5273px 0px;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 500;
             font-size: 15.4764px;
             line-height: 22px;
+            border: 2.21px solid;
+            border-image-source: linear-gradient(272.52deg, #FFA6FA 47.49%, #3C79D5 98.81%);
+            border-image-slice: 1;
+            box-shadow: 0px 4.81747px 116.824px rgba(255, 86, 246, 0.51);
+            border-radius: 0px 5.5273px 5.5273px 0px;
         }
     }
     @media screen and (max-width: 1340px) {
