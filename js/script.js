@@ -1,6 +1,7 @@
 const body = document.body;
 const scrollDown = "scroll-down";
 let lastScroll = 0;
+const header = document.getElementById('header');
 const burger = document.getElementById('burger-menu');
 const menu = document.getElementById('dropdown-menu');
 const content = document.querySelectorAll('.collection');
@@ -25,10 +26,12 @@ window.addEventListener("scroll", () => {
 burger.addEventListener('change', e => {
     if(e.target.checked === true) {
         menu.classList.toggle('active');
+        header.classList.toggle('active');
         body.classList.toggle('hidden');
     }
     if(e.target.checked === false) {
         menu.classList.remove('active');
+        header.classList.remove('active');
         body.classList.remove('hidden');
     }
 });
